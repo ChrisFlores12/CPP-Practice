@@ -1,42 +1,25 @@
-#ifndef STUDENT_H
-#define STUDNET_H
+#include "student.h"
 
-#include <string>
+std::string Student::getName() {
+    return name;
+}
 
-using namespace std;
+int Student::getId() {
+    return id;
+}
 
-class Student{
-    private:
-        string name;
-        int id;
-        float gpa;
+float Student::getGpa() {
+    return gpa;
+}
 
-    public:
-        // getters
-        string getName(){
-            return name;
-        }
+void Student::setName(std::string name) {
+    this->name = name;
+}
 
-        int getId(){
-            return id;
-        }
+void Student::setId(int id) {
+    this->id = id;
+}
 
-        float getGpa(){
-            return gpa;
-        }
-
-        // setters
-        void setName(string name){
-            this->name = name;
-        }
-
-        void setId(){
-            this->id = id;
-        }
-
-        void setGpa(float gpa){
-            this->gpa = gpa;
-        }
-};
-
-#endif
+void Student::setGpa(float gpa) {
+    this->gpa = gpa;
+}
